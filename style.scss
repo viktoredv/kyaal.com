@@ -4,7 +4,7 @@
 @import  "reset";
 @import "variables";
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400|IBM+Plex+Sans');
-$ibmMono: 'IBM Plex Mono', monospace;
+$ibmSans: 'IBM Plex Mono', monospace;
 $ibmSans: 'IBM Plex Sans', sans-serif;
 
 body {
@@ -41,8 +41,15 @@ body.fade {
   padding-left: 0;
 }
 
-.row .column, .row-reverse .column {
-  flex: 50%;
+.row .column:last-child, .row-reverse .column:first-child {
+  flex: 40%;
+  @include mobile {
+    text-align: center;
+    width: 100%;
+  }
+}
+.row .column:first-child, .row-reverse .column:last-child {
+  flex: 60%;
   @include mobile {
     text-align: center;
     width: 100%;
@@ -77,8 +84,7 @@ a:hover {
   text-align: center;
   width: 75%;
   @include mobile {
-    font: 12px/1.5 $ibmSans;
-    width: 100%;
+    font: 14px/1.5 $ibmSans;
   }
 }
 
@@ -88,7 +94,7 @@ a:hover {
 
 .page a {
   color: $lightGold!important;
-  font-family: $ibmMono;
+  font-family: $ibmSans;
 }
 
 .post {
@@ -123,9 +129,9 @@ h4,
 h5,
 h6 {
   color: $gold;
-  font-family: $ibmMono;
+  font-family: $ibmSans;
   font-weight: normal;
-  line-height: 1.7;
+  line-height: 1.1;
   margin-bottom: 16px;
   padding: 0;
   @include mobile {
@@ -285,7 +291,7 @@ img {
 .site-name {
   color: $gold;
   cursor: pointer;
-  font-family: $ibmMono;
+  font-family: $ibmSans;
   font-size: 32px;
   font-weight: 300;
   margin: 0;
@@ -312,7 +318,7 @@ nav {
     margin-top: 8px;
   }
 
-  a {
+  a:not(:first-child) {
     color: $gold;
     font-weight: 300;
     margin-left: 8px;

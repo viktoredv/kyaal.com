@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Work
+title: Assignments
 pic: /images/sound.jpg
 ---
 
