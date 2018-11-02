@@ -30,7 +30,9 @@ body.fade {
 .row {
     display: flex;
     align-items: center;
+    margin-bottom: 64px;
     @include mobile {
+     margin: 0;
      flex-direction: column;
     }
 }
@@ -75,11 +77,9 @@ a {
 .footer {
  width: 75%;
  margin: 0 auto;
- padding: 64px;
  font: 24px/1.7 $ibmSans;
  text-align: center;
  @include mobile {
-  padding: 0;
   font: 12px/1.5 $ibmSans;
   width: 100%;
  }

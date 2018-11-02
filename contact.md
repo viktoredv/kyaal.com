@@ -3,7 +3,8 @@ layout: page
 title: Contact
 permalink: /contact/
 pic: /images/sound3.jpg
-reference: '"Tempor arbitrantur doctrina quis cernantur.Et ab magna laboris, amet ullamco ne deserunt, quorum an excepteur se sint de eram quo incurreret ea veniam. Offendit duis singulis." — Promoe'
+reference: '"Tempor arbitrantur doctrina quis cernantur.Et ab magna laboris, amet ullamco ne deserunt."'
+reference_person: Promoe
 ---
 Some information about you!
 
@@ -13,4 +14,4 @@ A place to include any other types of information that you'd like to include abo
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[hi@kyaal.com](mailto:hi@kyaal.com)
