@@ -1,5 +1,4 @@
 ---
-
 ---
 @import  "reset";
 @import "variables";
@@ -41,14 +40,17 @@ body.fade {
   padding-left: 0;
 }
 
-.row .column:last-child, .row-reverse .column:first-child {
+.row .column:last-child,
+.row-reverse .column:first-child {
   flex: 40%;
   @include mobile {
     text-align: center;
     width: 100%;
   }
 }
-.row .column:first-child, .row-reverse .column:last-child {
+
+.row .column:first-child,
+.row-reverse .column:last-child {
   flex: 60%;
   @include mobile {
     text-align: center;
@@ -85,6 +87,31 @@ a:hover {
   width: 75%;
   @include mobile {
     font: 14px/1.5 $ibmSans;
+  }
+}
+
+.header {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin: 32px 0;
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.menu {
+  text-align: right;
+}
+
+.brand,
+.menu {
+  flex: 50%;
+  align-self: flex-end;
+  @include mobile {
+    width: 100%;
+    align-items: center;
+    text-align: center;
   }
 }
 
