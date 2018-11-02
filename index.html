@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">
+
+<div class="row">
+ <div class="column">
+  <img src="{{ site.baseurl }}{{ post.pic }}" width="100%" alt="">
+ </div>
+ <div class="column">
+  <h1>{{ post.title }}</h1>
+       <div class="entry">
+         {{ post.content }}
+       </div>
+ </div>
+</div>
+
+
+
+    <!-- <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>  -->
+    </article>
+  {% endfor %}
+</div>
