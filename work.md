@@ -9,4 +9,4 @@ reference_person: Rosh
 
 ### Listen
 
-I've collected some of my published work in a [Spotify playlist](#)
+Feel free to follow a playlist of my published work on [Spotify](#).

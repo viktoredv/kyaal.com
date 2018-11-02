@@ -1,9 +1,9 @@
 ---
+
 ---
-@import "reset";
+@import  "reset";
 @import "variables";
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400|IBM+Plex+Sans');
-
 $ibmMono: 'IBM Plex Mono', monospace;
 $ibmSans: 'IBM Plex Sans', sans-serif;
 
@@ -18,26 +18,30 @@ body.fade {
 }
 
 .row {
-  display: flex;
   align-items: center;
+  display: flex;
   margin-bottom: 48px;
   @include mobile {
-    margin: 0;
     flex-direction: column;
+    margin: 0;
   }
 }
 
 .row-reverse {
-  display: flex;
   align-items: center;
+  display: flex;
   margin-bottom: 48px;
   @include mobile {
-    margin: 0;
     flex-direction: column-reverse;
+    margin: 0;
   }
 }
 
-.column {
+.row-reverse .column .post {
+  padding-left: 0;
+}
+
+.row .column, .row-reverse .column {
   flex: 50%;
   @include mobile {
     text-align: center;
@@ -53,25 +57,25 @@ body.fade {
 }
 
 .column img {
-  display: block;
-  -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   border-radius: 4px;
-}
-
-a .row:hover {
-  background-color: $white;
+  display: block;
 }
 
 a {
   color: inherit;
 }
 
+a:hover {
+  color: $lightGold!important;
+}
+
 .footer {
-  width: 75%;
-  margin: 0 auto;
   font: 24px/1.7 $ibmSans;
+  margin: 0 auto;
   text-align: center;
+  width: 75%;
   @include mobile {
     font: 12px/1.5 $ibmSans;
     width: 100%;
@@ -79,12 +83,12 @@ a {
 }
 
 .site-name a {
-  color: $darkGold;
+  color: $gold;
 }
 
 .page a {
-  color: $blue!important;
-  text-decoration: underline;
+  color: $lightGold!important;
+  font-family: $ibmMono;
 }
 
 .post {
@@ -94,14 +98,15 @@ a {
   }
 }
 //
+
 html {
   font-size: 100%;
 }
 
 body {
   background: $white;
-  font: 16px/1.6 $ibmSans;
   color: $darkGold;
+  font: 16px/1.6 $ibmSans;
 }
 
 .container {
@@ -117,8 +122,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $ibmMono;
   color: $gold;
+  font-family: $ibmMono;
   font-weight: normal;
   line-height: 1.7;
   margin-bottom: 16px;
@@ -145,8 +150,8 @@ h3 {
 }
 
 h4 {
-  font-size: 18px;
   color: $gray;
+  font-size: 18px;
 }
 
 p {
@@ -155,8 +160,8 @@ p {
 
 a {
   color: $darkGray;
-  text-decoration: none;
   cursor: pointer;
+  text-decoration: none;
 
   &:active,
   &:hover {
@@ -204,23 +209,25 @@ img {
   max-width: 100%;
 }
 // Fixes images in popup boxes from Google Translate
+
 .gmnoprint img {
   max-width: none;
 }
 
 .date {
-  font-style: italic;
   color: $gray;
+  font-style: italic;
 }
 // Specify the color of the selection
+
 ::-moz-selection {
-  color: $black;
   background: $lightGray;
+  color: $black;
 }
 
 ::selection {
-  color: $black;
   background: $lightGray;
+  color: $black;
 }
 // Nicolas Gallagher's micro clearfix hack
 // http://nicolasgallagher.com/micro-clearfix-hack/
@@ -252,12 +259,12 @@ img {
 
 .site-avatar {
   float: left;
-  width: 64px;
   height: 64px;
   margin-right: 16px;
+  width: 64px;
   @include mobile {
-    float: none;
     display: block;
+    float: none;
     margin: 0 auto;
   }
 
@@ -269,25 +276,25 @@ img {
 .site-info {
   float: left;
   @include mobile {
-    float: none;
     display: block;
+    float: none;
     margin: 0 auto;
   }
 }
 
 .site-name {
-  margin: 0;
   color: $gold;
   cursor: pointer;
   font-family: $ibmMono;
-  font-weight: 300;
   font-size: 32px;
+  font-weight: 300;
+  margin: 0;
 }
 
 .site-description {
-  margin: -4px 0 0;
   color: $gray;
   font-size: 16px;
+  margin: -4px 0 0;
   @include mobile {
     margin: 4px 0;
   }
@@ -295,21 +302,21 @@ img {
 
 nav {
   float: right;
-  margin-top: 24px; // @TODO: Vertically middle align
   font-family: $ibmSans;
   font-size: 16px;
+  margin-top: 24px; // @TODO: Vertically middle align
   @include mobile {
-    float: none;
-    margin-top: 8px;
     display: block;
+    float: none;
     font-size: 16px;
+    margin-top: 8px;
   }
 
   a {
-    margin-left: 8px;
-    color: $darkGold;
-    text-align: right;
+    color: $gold;
     font-weight: 300;
+    margin-left: 8px;
+    text-align: right;
     @include mobile {
       margin-left: 8px;
     }
@@ -330,12 +337,12 @@ nav {
 
 .post {
   blockquote {
-    margin: 1.8em 0.8em;
     border-left: 2px solid $gray;
-    padding: 0.1em 1em;
     color: $gray;
     font-size: 24px;
     font-style: italic;
+    margin: 1.8em 0.8em;
+    padding: 0.1em 1em;
   }
 
   .comments {
