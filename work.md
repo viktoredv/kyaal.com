@@ -2,6 +2,7 @@
 layout: page
 title: Work
 permalink: /work/
+pic: /images/sound.jpg
 ---
 
 Some information about you!

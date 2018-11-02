@@ -2,6 +2,7 @@
 layout: page
 title: Contact
 permalink: /contact/
+pic: /images/sound3.jpg
 ---
 
 Some information about you!
