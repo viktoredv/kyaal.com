@@ -53,7 +53,7 @@ body.fade {
 .column .post {
  padding: 0 64px;
  @include mobile {
-  padding: 32px;
+  padding: 24px 0;
  }
 }
 
@@ -76,11 +76,11 @@ a {
  width: 75%;
  margin: 0 auto;
  padding: 64px;
- font: 24px/1.5 $ibmSans;
+ font: 24px/1.7 $ibmSans;
  text-align: center;
  @include mobile {
   padding: 0;
-  font: 16px/1.5 $ibmSans;
+  font: 12px/1.5 $ibmSans;
   width: 100%;
  }
 }
