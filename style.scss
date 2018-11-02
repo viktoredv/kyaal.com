@@ -34,6 +34,13 @@ body.fade {
      flex-direction: column;
     }
 }
+.row-reverse {
+    display: flex;
+    align-items: center;
+    @include mobile {
+     flex-direction: column-reverse;
+    }
+}
 
 .column {
     flex: 50%;
@@ -43,14 +50,8 @@ body.fade {
     }
 }
 
-.column:last-child {
+.column .post {
  padding: 0 64px;
- @include mobile {
-  padding: 32px;
- }
-}
-.page.row.column {
- padding: 64px 0;
  @include mobile {
   padding: 32px;
  }
@@ -68,7 +69,30 @@ a .row:hover {
 }
 
 a {
- color: inherit!important;
+ color: inherit;
+}
+
+.footer {
+ width: 75%;
+ margin: 0 auto;
+ padding: 64px;
+ font: 24px/1.5 $ibmSans;
+ text-align: center;
+ @include mobile {
+  padding: 0;
+  font: 16px/1.5 $ibmSans;
+  width: 100%;
+ }
+}
+
+.site-name a {
+ color: $darkGold;
+}
+
+.page a {
+ color: $blue!important;
+ padding: 3px 7px 5px 7px;
+ background-color: $lightGold;
 }
 
 .post {
@@ -85,7 +109,7 @@ html {
 
 body {
 	background: $white;
-  font: 16px/1.6 $ibmSans, sans-serif;
+  font: 16px/1.6 $ibmSans;
   color: $darkGold;
 }
 
@@ -101,7 +125,7 @@ h1, h2, h3, h4, h5, h6 {
   color: $gold;
   font-weight: normal;
   line-height: 1.7;
-  margin: 0;
+  margin-bottom: 16px;
   padding: 0;
 
   @include mobile {
@@ -130,7 +154,7 @@ h4 {
 }
 
 p {
-  margin: 16px 0;
+  margin-bottom: 16px;
 }
 
 a {
@@ -293,7 +317,6 @@ nav {
 
     @include mobile {
       margin-left: 8px;
-      color: $blue;
     }
   }
 }
