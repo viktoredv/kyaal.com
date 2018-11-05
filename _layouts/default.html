@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{ site.name }}: {{ site.description }}{% if page.title %} — {{ page.title }}{% endif %}</title>
+<head>
+  <title>{{ site.name }}: {{ site.description }}{% if page.title %} — {{ page.title }}{% endif %}</title>
 
-    {% include meta.html %}
+  {% include meta.html %}
 
-    <!--[if lt IE 9]>
+  <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
@@ -29,40 +30,33 @@
        <a href="{{ site.baseurl }}/work">Work</a>
        <a href="{{ site.baseurl }}/contact">Contact</a>
        <a href="{{ site.baseurl }}/follow">Follow</a>
+=======
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+  {% seo %}
+</head>
+
+<body>
+  <script>
+    document.body.className = 'fade';
+  </script>
+  <header>
+    <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+    <nav>
+      <a href="{{ site.baseurl }}/work">Work</a>
+      <a href="{{ site.baseurl }}/contact">Contact</a>
+      <a href="{{ site.baseurl }}/follow">Follow</a>
+>>>>>>> c9656a0294b1dfc29b1b3f495d7b313bc90895b9
     </nav>
- </div>
-</div>
+  </header>
+  {{ content }}
+  <footer></footer>
+  {% include analytics.html %}
+  <script>
+    document.addEventListener("DOMContentLoaded", function(e) {
+      document.body.className = '';
+    });
+  </script>
+</body>
 
-    <!-- <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/work">Work</a>
-            <a href="{{ site.baseurl }}/contact">Contact</a>
-            <a href="{{ site.baseurl }}/follow">Follow</a>
-          </nav>
-        </header>
-      </div>
-    </div> -->
-
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-      </div>
-    </div>
-
-    {% include analytics.html %}
-    <script>
-  document.addEventListener("DOMContentLoaded", function(e) {
-    document.body.className = '';
-  });
-</script>
-  </body>
 </html>
