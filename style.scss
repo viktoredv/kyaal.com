@@ -9,6 +9,13 @@ $ibmSans: 'IBM Plex Sans', sans-serif;
 body {
   opacity: 1;
   transition: 0.7s opacity;
+  margin: 0 auto;
+  max-width: 1024px;
+  width: 100%;
+  padding: 2% 5%;
+  @include mobile {
+    padding: 10%;
+  }
 }
 
 body.fade {
@@ -16,10 +23,25 @@ body.fade {
   transition: none;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3%;
+  @include mobile {
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10%;
+  }
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
 .row {
   align-items: center;
   display: flex;
-  margin-bottom: 48px;
+  margin-bottom: 5%;
   @include mobile {
     flex-direction: column;
     margin: 0;
@@ -29,33 +51,37 @@ body.fade {
 .row-reverse {
   align-items: center;
   display: flex;
-  margin-bottom: 48px;
+  margin-bottom: 5%;
   @include mobile {
     flex-direction: column-reverse;
     margin: 0;
   }
 }
 
-.row-reverse .column .post {
-  padding-left: 0;
-}
 
 .row .column:last-child,
 .row-reverse .column:first-child {
-  flex: 40%;
+  width: 40%;
+  box-sizing: border-box;
+  padding: 0 5%;
   @include mobile {
     text-align: center;
     width: 100%;
+    padding: 10% 5%;
   }
 }
 
 .row .column:first-child,
 .row-reverse .column:last-child {
-  flex: 60%;
+  width: 60%;
   @include mobile {
     text-align: center;
     width: 100%;
   }
+}
+
+.row-reverse span.column {
+  padding-left: 0!important;
 }
 
 .column .post {

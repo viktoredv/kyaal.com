@@ -6,7 +6,6 @@ pic: /images/sound3.jpg
 reference: '"Tempor arbitrantur doctrina quis cernantur. Et ab magna laboris, amet ullamco ne deserunt."'
 reference_person: Promoe
 ---
-
 ### Enquiries
 
 If you are interested in my services, do not hesitate to reach out.

@@ -1,60 +1,26 @@
 ---
 layout: default
 ---
-<div class="posts">
+  {% for post in site.posts %}
+    {% assign mod = forloop.index | modulo: 2 %}
+    {% if mod == 1 %}
+     <article class="row">
+       <img src="{{ site.baseurl }}{{ post.pic }}" alt="Urban music production" class="column">
 
 
-
- {% for post in site.posts %}
-     {% assign mod = forloop.index | modulo: 2 %}
-     {% if mod == 1 %}
-     <article class="post">
-       <div class="row">
-       <div class="column">
-         <img src="{{ site.baseurl }}{{ post.pic }}" width="100%" alt="">
-       </div>
-     <div class="column">
-      <div class="post">
+      <span class="column">
        <h1>{{ post.title }}</h1>
-       <div class="entry">
-          {{ post.content }}
-       </div>
-       </div>
-      </div>
-     </div>
+        {{ post.content }}</span>
     </article>
      {% else %}
-     <article class="post">
-       <div class="row-reverse">
+     <article class="row-reverse">
 
-      <div class="column">
-       <div class="post">
-        <h1>{{ post.title }}</h1>
-        <div class="entry">
-           {{ post.content }}
-        </div>
-        </div>
-       </div>
-       <div class="column">
-         <img src="{{ site.baseurl }}{{ post.pic }}" width="100%" alt="">
-       </div>
-     </div>
+
+      <span class="column">
+       <h1>{{ post.title }}</h1>
+        {{ post.content }}</span>
+          <img src="{{ site.baseurl }}{{ post.pic }}" alt="Urban music production" class="column">
+
     </article>
      {% endif %}
  {% endfor %}
-  <!-- {% for post in site.posts %}
-    <article class="post">
-      <div class="row">
-      <div class="column">
-        <img src="{{ site.baseurl }}{{ post.pic }}" width="100%" alt="">
-      </div>
-    <div class="column">
-      <h1>{{ post.title }}</h1>
-      <div class="entry">
-         {{ post.content }}
-      </div>
-     </div>
-    </div><!-- <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-   </article>
- {% endfor %} -->
-</div>
