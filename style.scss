@@ -1,9 +1,8 @@
 ---
 ---
-@import "reset";
+@import  "reset";
 @import "variables";
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400|IBM+Plex+Sans');
-$ibmSans: 'IBM Plex Mono', monospace;
 $ibmSans: 'IBM Plex Sans', sans-serif;
 
 body {
@@ -38,6 +37,7 @@ header {
 p:last-child {
   margin-bottom: 0;
 }
+
 .row {
   align-items: center;
   display: flex;
@@ -57,7 +57,6 @@ p:last-child {
     margin: 0;
   }
 }
-
 
 .row .column:last-child,
 .row-reverse .column:first-child {
