@@ -37,7 +37,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 4% 0;
+  margin: 5% 0;
   @include mobile {
     align-items: center;
     flex-direction: column;
