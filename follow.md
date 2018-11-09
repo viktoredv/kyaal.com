@@ -2,7 +2,7 @@
 layout: page
 title: Follow
 permalink: /follow/
-pic: /images/sound2.jpg
+pic: /images/karl-lund.jpg
 reference: '"Est in tamen occaecat non summis officia si export aliqua non illum incurreret probant, probant nisi!"'
 reference_person: 'Mother Mink'
 ---

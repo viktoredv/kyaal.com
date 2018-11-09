@@ -2,7 +2,7 @@
 layout: page
 title: Work
 permalink: /work/
-pic: /images/sound.jpg
+pic: /images/studio.jpg
 reference: '"Iudicem hic summis, arbitror elit id excepteur reprehenderit nam te dolore nostrud cupidatat a magna cupidatat reprehenderit."'
 reference_person: Rosh
 ---

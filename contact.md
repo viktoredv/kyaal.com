@@ -2,7 +2,7 @@
 layout: page
 title: Contact
 permalink: /contact/
-pic: /images/sound3.jpg
+pic: /images/studio.jpg
 reference: '"Tempor arbitrantur doctrina quis cernantur. Et ab magna laboris, amet ullamco ne deserunt."'
 reference_person: Promoe
 ---
