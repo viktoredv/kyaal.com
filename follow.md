@@ -10,4 +10,8 @@ reference_person: 'Mother Mink'
 
 Please follow me in these social media channels:
 
-Instagram: [@kyaal](#)
+Instagram: [@kyaal](https://instagram.com/kyaal)
+
+Twitter: [@kyaal](https://twitter.com/kyaal)
+
+Facebook: [karllund](https://facebook.com/karllund)

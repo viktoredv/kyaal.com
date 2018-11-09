@@ -16,7 +16,7 @@ body {
   transition: 0.7s opacity;
   margin: 0 auto;
   max-width: 1024px;
-  padding: 32px;
+  padding: 0 32px;
   background: $white;
   color: $darkGold;
   font: 15px/1.8 $ibmSans;
@@ -25,6 +25,8 @@ body {
     padding: 10%;
   }
 }
+
+
 
 body.fade {
   opacity: 0;
@@ -35,7 +37,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 4%;
+  margin: 4% 0;
   @include mobile {
     align-items: center;
     flex-direction: column;
@@ -44,6 +46,26 @@ header {
   a.brand {
     font: 2em/1.0 $ibmMono;
   }
+}
+
+
+nav {
+  a:not(:first-child) {
+    margin-left: 8px;
+  }
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+}
+
+.column a {
+  font-family: $ibmMono;
+}
+
+iframe {
+  padding: 2%;
 }
 
 p:last-child {
@@ -192,128 +214,10 @@ strong {
 img {
   max-width: 100%;
 }
-// Fixes images in popup boxes from Google Translate
 
 .gmnoprint img {
   max-width: none;
 }
 
-.date {
-  color: $gray;
-  font-style: italic;
-}
-// Specify the color of the selection
-
-::-moz-selection {
-  background: $lightGray;
-  color: $black;
-}
-
-::selection {
-  background: $lightGray;
-  color: $black;
-}
-// Nicolas Gallagher's micro clearfix hack
-// http://nicolasgallagher.com/micro-clearfix-hack/
-
-.clearfix:after,
-.clearfix:before {
-  content: " ";
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
-}
-/*********************/
-/* LAYOUT / SECTIONS */
-/*********************/
-//
-// .masthead
-//
-
-.wrapper-masthead {}
-
-.masthead {
-  padding: 32px 0;
-  @include mobile {
-    text-align: center;
-  }
-}
-
-.site-avatar {
-  float: left;
-  height: 64px;
-  margin-right: 16px;
-  width: 64px;
-  @include mobile {
-    display: block;
-    float: none;
-    margin: 0 auto;
-  }
-
-  img {
-    border-radius: 4px;
-  }
-}
-
-nav {
-  float: right;
-  font-family: $ibmSans;
-  font-size: 16px;
-  margin-top: 24px; // @TODO: Vertically middle align
-  @include mobile {
-    display: block;
-    float: none;
-    font-size: 16px;
-    margin-top: 8px;
-  }
-
-  a:not(:first-child) {
-    margin-left: 8px;
-  }
-}
-//
-// .main
-//
-// .posts > .post {
-//   padding-bottom: 2em;
-//   border-bottom: 1px solid $lightGray;
-// }
-//
-// .posts > .post:last-child {
-//   padding-bottom: 1em;
-//   border-bottom: none;
-// }
-
-.post {
-  blockquote {
-    border-left: 2px solid $gray;
-    color: $gray;
-    font-size: 24px;
-    font-style: italic;
-    margin: 1.8em 0.8em;
-    padding: 0.1em 1em;
-  }
-
-  .comments {
-    margin-top: 8px;
-  }
-
-  .read-more {
-    font-size: 16px;
-  }
-}
-
-.wrapper-footer {
-  margin-top: 64px;
-}
-
-footer {
-  padding: 24px 0;
-  text-align: center;
-}
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
