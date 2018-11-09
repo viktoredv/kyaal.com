@@ -45,6 +45,9 @@ header {
   }
   a.brand {
     font: 2em/1.0 $ibmMono;
+    @include mobile {
+      margin-bottom: 5%;
+    }
   }
 }
 
