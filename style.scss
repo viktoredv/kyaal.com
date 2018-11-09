@@ -22,11 +22,9 @@ body {
   font: 15px/1.8 $ibmSans;
   font-weight: 300;
   @include mobile {
-    padding: 10%;
+    padding: 5%;
   }
 }
-
-
 
 body.fade {
   opacity: 0;
@@ -38,23 +36,28 @@ header {
   justify-content: space-between;
   align-items: flex-end;
   margin: 5% 0;
+  font: 1em/1.0 $ibmMono;
+  color: inherit;
   @include mobile {
     align-items: center;
     flex-direction: column;
     margin-bottom: 10%;
   }
+
   a.brand {
-    font: 2em/1.0 $ibmMono;
     @include mobile {
       margin-bottom: 5%;
     }
   }
 }
 
-
 nav {
   a:not(:first-child) {
     margin-left: 8px;
+  }
+  a {
+   padding-bottom: 4px;
+   border-bottom: 2px solid $blue;
   }
 }
 
@@ -65,10 +68,6 @@ footer {
 
 .column a {
   font-family: $ibmMono;
-}
-
-iframe {
-  padding: 2%;
 }
 
 p:last-child {
@@ -84,6 +83,7 @@ p:last-child {
     margin: 0;
   }
 }
+
 .row-reverse {
   align-items: center;
   display: flex;
@@ -125,6 +125,7 @@ img.column {
   border-radius: 4px;
   display: block;
 }
+
 .footer {
   font: 14px/1.7 $ibmMono;
   margin: 0 auto;
@@ -221,6 +222,5 @@ img {
 .gmnoprint img {
   max-width: none;
 }
-
 @import "highlights";
 @import "svg-icons";
